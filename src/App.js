@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import CartWidget from './components/CartWidget/CartWidget';
+import ItemListContainer from './components/ItemListContainer/ItemList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+ class App extends Component {
+  render() {
+    return (
+      <div className='App'>
+        <Header />
+        <h1>Estamos para Crear Experiencias</h1>
+        <Navbar title={'Home'} />
+        <Navbar title={'Productos'} />
+        <Navbar title={'Pedidos'} />
+        <Navbar title={'News'}/>
+        <CartWidget />
+        <br/>
+        <ItemListContainer />
+      </div>
+    )
+  }
 }
 
 export default App;
